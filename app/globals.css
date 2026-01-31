@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Theme colors - these will be set by ThemeProvider */
+  --accent-100: #eef2ff;
+  --accent-200: #c7d2fe;
+  --accent-300: #a5b4fc;
+  --accent-400: #6366f1;
+  --accent-500: #4f46e5;
+  --accent-600: #4338ca;
+  --accent-700: #3730a3;
+
+  --bg-100: #ffffff;
+  --bg-200: #f9fafb;
+  --bg-300: #f3f4f6;
+  --bg-400: #e5e7eb;
+  --bg-500: #d1d5db;
+  --bg-600: #9ca3af;
+  --bg-700: #6b7280;
+
+  --text-100: #1f2937;
+  --text-200: #374151;
+  --text-300: #4b5563;
+  --text-400: #6b7280;
+  --text-500: #9ca3af;
+  --text-600: #d1d5db;
+  --text-700: #f3f4f6;
+
+  /* Status Colors - Success (Green) */
+  --success-100: #f0fdf4;
+  --success-200: #bbf7d0;
+  --success-300: #86efac;
+  --success-400: #22c55e;
+  --success-500: #16a34a;
+  --success-600: #15803d;
+  --success-700: #166534;
+
+  /* Status Colors - Fail (Red) */
+  --fail-100: #fef2f2;
+  --fail-200: #fecaca;
+  --fail-300: #fca5a5;
+  --fail-400: #ef4444;
+  --fail-500: #dc2626;
+  --fail-600: #b91c1c;
+  --fail-700: #991b1b;
+
+  /* Status Colors - Warning (Amber) */
+  --warning-100: #fffbeb;
+  --warning-200: #fde68a;
+  --warning-300: #fcd34d;
+  --warning-400: #f59e0b;
+  --warning-500: #d97706;
+  --warning-600: #b45309;
+  --warning-700: #92400e;
+
+  /* Status Colors - Info (Blue) */
+  --info-100: #eff6ff;
+  --info-200: #bfdbfe;
+  --info-300: #93c5fd;
+  --info-400: #3b82f6;
+  --info-500: #2563eb;
+  --info-600: #1d4ed8;
+  --info-700: #1e40af;
+
+  --background: var(--bg-100);
+  --foreground: var(--text-100);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-100);
+  color: var(--text-100);
+  overflow: hidden;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Theme Select Styles */
+.theme-select-trigger {
+  background-color: var(--bg-200) !important;
+  border-color: var(--bg-300) !important;
+  color: var(--text-100) !important;
+}
+
+.theme-select-trigger:hover {
+  background-color: var(--bg-300) !important;
+}
+
+.theme-select-content {
+  background-color: var(--bg-200) !important;
+  border-color: var(--bg-300) !important;
+}
+
+.theme-select-item {
+  color: var(--text-100) !important;
+}
+
+.theme-select-item:hover,
+.theme-select-item:focus {
+  background-color: var(--accent-100) !important;
+  color: var(--accent-400) !important;
+}
+
+/* Color input styles */
+input[type="color"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: 1px solid var(--bg-300);
+  border-radius: 4px;
+}
