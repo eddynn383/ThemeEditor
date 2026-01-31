@@ -8,10 +8,10 @@ export function ThemePreview() {
     <div className="flex flex-col h-screen">
       {/* Header */}
       <div
-        className="h-14 border-b px-6 flex items-center justify-between gap-3"
+        className="h-14 border-b px-4 flex items-center justify-between gap-3"
         style={{ borderColor: "var(--bg-200)" }}
       >
-        <h2>Component Preview</h2>
+        <h2 className="text-lg font-bold">Component Preview</h2>
         <SaveThemeButton />
       </div>
       <div className="flex-1 h-max overflow-hidden">

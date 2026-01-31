@@ -1157,10 +1157,10 @@ export function ComponentPreview() {
                 style={{ borderColor: "var(--bg-200)" }}
             >
                 <div
-                    className="flex p-4 min-h-[64px] border-b"
+                    className="flex items-center p-4 min-h-[64px] border-b"
                     style={{ borderColor: "var(--bg-200)" }}
                 >
-                    <h2 className="text-lg" style={{ color: "var(--text-100)" }}>
+                    <h2 className="text-base font-bold" style={{ color: "var(--text-100)" }}>
                         Components
                     </h2>
                 </div>
