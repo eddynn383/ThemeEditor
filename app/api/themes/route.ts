@@ -8,7 +8,7 @@ export async function GET() {
             orderBy: { updatedAt: "desc" },
         });
 
-        const parsedThemes = themes.map((theme: { lightTheme: string; darkTheme: string; componentOverrides: string; borderRadiusOverrides: string; componentStates: string; alphaOverrides: string; }) => ({
+        const parsedThemes = themes.map((theme) => ({
             ...theme,
             lightTheme: JSON.parse(theme.lightTheme),
             darkTheme: theme.darkTheme ? JSON.parse(theme.darkTheme) : null,
