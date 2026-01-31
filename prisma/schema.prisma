@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Theme {
+  id                    String   @id @default(cuid())
+  name                  String
+  lightTheme            String   // JSON stored as string
+  darkTheme             String?  // JSON stored as string (nullable)
+  componentOverrides    String   @default("{}") // JSON
+  borderRadiusOverrides String   @default("{}") // JSON
+  componentStates       String   @default("{}") // JSON
+  alphaOverrides        String   @default("{}") // JSON
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
